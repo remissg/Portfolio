@@ -121,7 +121,7 @@ I'm always open to discussing new projects, creative ideas, or opportunities.
 
 *   **LinkedIn:** [Joydip Maiti](https://www.linkedin.com/in/joydip-maiti-607ba4301/)
 *   **GitHub:** [@remissg](https://github.com/remissg)
-*   **Email:** [joydipmaiti0002@gmail.com](mailto:joydipmaiti0002@gmail.com)
+*   **Email:** [maitijoydip888@gmail.com](mailto:maitijoydip888@gmail.com)
 
 ---
 
