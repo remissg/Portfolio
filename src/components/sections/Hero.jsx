@@ -1,15 +1,47 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FileText, Github, Linkedin, ArrowRight } from 'lucide-react';
 import profileImg from '../../assets/hero_profile.png';
 
 const Hero = () => {
+    const [text, setText] = useState('');
+    const [isDeleting, setIsDeleting] = useState(false);
+    const [loopNum, setLoopNum] = useState(0);
+    const [typingSpeed, setTypingSpeed] = useState(150);
+
+    const toRotate = ["Frontend Developer", "Software Engineer", "React Developer", "UI/UX Enthusiast"];
+
+    useEffect(() => {
+        const handleTyping = () => {
+            const i = loopNum % toRotate.length;
+            const fullText = toRotate[i];
+
+            setText(isDeleting
+                ? fullText.substring(0, text.length - 1)
+                : fullText.substring(0, text.length + 1)
+            );
+
+            setTypingSpeed(isDeleting ? 100 : 150);
+
+            if (!isDeleting && text === fullText) {
+                setTimeout(() => setIsDeleting(true), 2000); // Pause at end
+            } else if (isDeleting && text === '') {
+                setIsDeleting(false);
+                setLoopNum(loopNum + 1);
+                setTypingSpeed(500); // Pause before next
+            }
+        };
+
+        const timer = setTimeout(handleTyping, typingSpeed);
+        return () => clearTimeout(timer);
+    }, [text, isDeleting, loopNum, typingSpeed]);
+
     return (
-        <section id="home" className="min-h-[90vh] flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+        <section id="home" className="min-h-[90vh] flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-purple-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950 transition-colors duration-300">
             {/* Background Decor - Vibrant */}
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
-                <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-purple-200/40 rounded-full blur-3xl opacity-60 mix-blend-multiply animate-blob"></div>
-                <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-blue-200/40 rounded-full blur-3xl opacity-60 mix-blend-multiply animate-blob animation-delay-2000"></div>
-                <div className="absolute top-[20%] right-[30%] w-[300px] h-[300px] bg-pink-200/40 rounded-full blur-3xl opacity-60 mix-blend-multiply animate-blob animation-delay-4000"></div>
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+                <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-purple-200/40 dark:bg-purple-900/20 rounded-full blur-3xl opacity-60 mix-blend-multiply dark:mix-blend-screen animate-blob"></div>
+                <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-blue-200/40 dark:bg-blue-900/20 rounded-full blur-3xl opacity-60 mix-blend-multiply dark:mix-blend-screen animate-blob animation-delay-2000"></div>
+                <div className="absolute top-[20%] right-[30%] w-[300px] h-[300px] bg-pink-200/40 dark:bg-pink-900/20 rounded-full blur-3xl opacity-60 mix-blend-multiply dark:mix-blend-screen animate-blob animation-delay-4000"></div>
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
@@ -18,20 +50,20 @@ const Hero = () => {
 
                     {/* Text Content - Order 2 on Mobile (Below Image), Order 1 on Desktop (Left) */}
                     <div className="flex-1 text-center md:text-left order-2 md:order-1">
-                        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-4 animate-fade-in-up">
+                        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 dark:text-white mb-4 animate-fade-in-up">
                             <span className="block text-slate-500 text-2xl md:text-3xl font-medium mb-3 tracking-widest uppercase">Hello, I am</span>
                             <span className="bg-clip-text text-transparent bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 inline-block transform transition-transform duration-300 hover:scale-110 hover:-translate-y-2 hover:from-pink-600 hover:via-purple-600 hover:to-indigo-600 cursor-default">
                                 Joydip Maiti
                             </span>
                         </h1>
 
-                        <div className="w-max">
-                            <h2 className="text-3xl md:text-5xl font-bold text-slate-400 mb-8 animate-typewriter pr-5 pb-2">
-                                Frontend Developer
+                        <div className="h-[60px] md:h-[80px] flex items-center justify-center md:justify-start">
+                            <h2 className="text-3xl md:text-5xl font-bold text-slate-400 text-center md:text-left mb-8">
+                                <span className="border-r-4 border-indigo-600 pr-2 animate-blink">{text}</span>
                             </h2>
                         </div>
 
-                        <p className="text-lg md:text-xl text-slate-600 mb-12 leading-relaxed animate-fade-in-up delay-200">
+                        <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-12 leading-relaxed animate-fade-in-up delay-200">
                             Specializing in building modern, responsive, and performance-driven web applications with a focus on clean code and user experience.
                         </p>
 
@@ -49,7 +81,7 @@ const Hero = () => {
                                 href="https://github.com/remissg"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-700 transition-all duration-200 bg-white border-2 border-slate-200 hover:border-transparent hover:text-white hover:bg-gradient-to-r hover:from-slate-800 hover:to-slate-900 rounded-xl shadow-sm group hover:-translate-y-1 relative overflow-hidden"
+                                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-700 dark:text-slate-200 transition-all duration-200 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 hover:border-transparent hover:text-white hover:bg-gradient-to-r hover:from-slate-800 hover:to-slate-900 dark:hover:from-slate-700 dark:hover:to-slate-600 rounded-xl shadow-sm group hover:-translate-y-1 relative overflow-hidden"
                             >
                                 <span className="relative z-10 flex items-center">
                                     <Github className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" /> GitHub
@@ -60,7 +92,7 @@ const Hero = () => {
                                 href="https://www.linkedin.com/in/joydip-maiti-607ba4301/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-700 transition-all duration-200 bg-white border-2 border-slate-200 hover:border-transparent hover:text-white hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 rounded-xl shadow-sm group hover:-translate-y-1"
+                                className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-700 dark:text-slate-200 transition-all duration-200 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 hover:border-transparent hover:text-white hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 rounded-xl shadow-sm group hover:-translate-y-1"
                             >
                                 <Linkedin className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" /> LinkedIn
                             </a>
