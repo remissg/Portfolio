@@ -6,13 +6,13 @@ import calculatorImg from '../../assets/calculator.png';
 import todoListImg from '../../assets/todo-list.png';
 
 const ProjectCard = ({ title, tech, liveUrl, repoUrl, image }) => (
-    <div className="group bg-white p-0 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 hover:border-transparent relative flex flex-col h-full overflow-hidden">
+    <div className="group bg-white dark:bg-slate-900 p-0 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 dark:border-slate-800 hover:border-transparent relative flex flex-col h-full overflow-hidden">
         {/* Gradient Border on Hover */}
         <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 -z-10 blur-[2px] transition-opacity duration-300"></div>
-        <div className="absolute inset-[2px] rounded-2xl bg-white -z-10"></div>
+        <div className="absolute inset-[2px] rounded-2xl bg-white dark:bg-slate-900 -z-10"></div>
 
         {/* Image Section */}
-        <div className="h-48 w-full overflow-hidden bg-slate-200 relative">
+        <div className="h-48 w-full overflow-hidden bg-slate-200 dark:bg-slate-800 relative">
             {image ? (
                 <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             ) : (
@@ -25,12 +25,12 @@ const ProjectCard = ({ title, tech, liveUrl, repoUrl, image }) => (
 
         <div className="p-8 flex flex-col flex-grow">
             <div className="mb-4 flex flex-col items-start">
-                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-700 group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">{title}</h3>
+                <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-300 group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">{title}</h3>
             </div>
 
             <div className="flex flex-wrap gap-2 mt-auto mb-8">
                 {tech.map((t, index) => (
-                    <span key={index} className="text-xs font-bold uppercase tracking-wider text-slate-600 bg-slate-50 px-2 py-1 shadow-sm border border-slate-100 rounded-lg group-hover:bg-white group-hover:border-blue-100 transition-colors">
+                    <span key={index} className="text-xs font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 bg-slate-50 dark:bg-slate-800 px-2 py-1 shadow-sm border border-slate-100 dark:border-slate-700 rounded-lg group-hover:bg-white dark:group-hover:bg-slate-800 group-hover:border-blue-100 dark:group-hover:border-blue-900/50 transition-colors">
                         {t}
                     </span>
                 ))}
@@ -41,7 +41,7 @@ const ProjectCard = ({ title, tech, liveUrl, repoUrl, image }) => (
                     href={repoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center py-2 border-2 border-slate-200 hover:border-slate-900 hover:bg-slate-900 hover:text-white transition-all text-sm font-bold uppercase tracking-wider rounded-xl group-hover:shadow-md"
+                    className="flex items-center justify-center py-2 border-2 border-slate-200 dark:border-slate-700 hover:border-slate-900 dark:hover:border-white hover:bg-slate-900 dark:hover:bg-white hover:text-white dark:hover:text-slate-900 text-slate-700 dark:text-slate-300 transition-all text-sm font-bold uppercase tracking-wider rounded-xl group-hover:shadow-md"
                 >
                     <Github size={16} className="mr-2" /> GitHub
                 </a>
@@ -84,14 +84,14 @@ const Projects = () => {
     ];
 
     return (
-        <section id="projects" className="py-20 bg-slate-50">
+        <section id="projects" className="py-20 bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <div className="inline-block mb-4">
                         <div className="h-1.5 w-20 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full mx-auto"></div>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 uppercase tracking-tight hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 transition-all duration-300 cursor-default">Featured Projects</h2>
-                    <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-tight hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 transition-all duration-300 cursor-default">Featured Projects</h2>
+                    <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
                         A selection of my web development work.
                     </p>
                 </div>

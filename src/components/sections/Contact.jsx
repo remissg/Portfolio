@@ -47,14 +47,14 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-20 bg-slate-50">
+        <section id="contact" className="py-20 bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <div className="inline-block mb-4">
                         <div className="h-1.5 w-20 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full mx-auto"></div>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 uppercase tracking-tight hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 transition-all duration-300 cursor-default">Get In Touch</h2>
-                    <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-tight hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 transition-all duration-300 cursor-default">Get In Touch</h2>
+                    <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
                         Available for freelance opportunities and full-time roles.
                     </p>
                 </div>
@@ -62,64 +62,64 @@ const Contact = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
                     {/* Contact Info */}
                     <div className="space-y-6">
-                        <div className="bg-white p-8 rounded-xl border-l-4 border-transparent bg-clip-padding relative shadow-sm hover:shadow-lg transition-all duration-300">
+                        <div className="bg-white dark:bg-slate-900 p-8 rounded-xl border-l-4 border-transparent bg-clip-padding relative shadow-sm hover:shadow-lg transition-all duration-300">
                             {/* Gradient Border Trick */}
                             <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-blue-600 to-purple-600 rounded-l-xl"></div>
 
-                            <h3 className="text-2xl font-bold text-slate-900 mb-6">Contact Details</h3>
+                            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Contact Details</h3>
 
                             <div className="space-y-6">
                                 <div className="flex items-center group">
-                                    <div className="w-12 h-12 bg-blue-50 text-blue-600 flex items-center justify-center mr-4 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:text-white transition-colors duration-300 rounded-lg shadow-sm">
+                                    <div className="w-12 h-12 bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 flex items-center justify-center mr-4 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:text-white transition-colors duration-300 rounded-lg shadow-sm">
                                         <MapPin size={24} />
                                     </div>
                                     <div>
-                                        <p className="text-sm text-slate-500 font-bold uppercase tracking-wider">Location</p>
-                                        <p className="text-lg text-slate-900 font-medium">Kolkata, India</p>
+                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Location</p>
+                                        <p className="text-lg text-slate-900 dark:text-white font-medium">Kolkata, India</p>
                                     </div>
                                 </div>
 
                                 <div className="flex items-center group">
-                                    <div className="w-12 h-12 bg-blue-50 text-blue-600 flex items-center justify-center mr-4 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:text-white transition-colors duration-300 rounded-lg shadow-sm">
+                                    <div className="w-12 h-12 bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 flex items-center justify-center mr-4 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:text-white transition-colors duration-300 rounded-lg shadow-sm">
                                         <Phone size={24} />
                                     </div>
                                     <div>
-                                        <p className="text-sm text-slate-500 font-bold uppercase tracking-wider">Phone</p>
-                                        <p className="text-lg text-slate-900 font-medium">+91 7319127627</p>
+                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Phone</p>
+                                        <p className="text-lg text-slate-900 dark:text-white font-medium">+91 7319127627</p>
                                     </div>
                                 </div>
 
                                 <div className="flex items-center group">
-                                    <div className="w-12 h-12 bg-blue-50 text-blue-600 flex items-center justify-center mr-4 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:text-white transition-colors duration-300 rounded-lg shadow-sm">
+                                    <div className="w-12 h-12 bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 flex items-center justify-center mr-4 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:text-white transition-colors duration-300 rounded-lg shadow-sm">
                                         <Mail size={24} />
                                     </div>
                                     <div>
-                                        <p className="text-sm text-slate-500 font-bold uppercase tracking-wider">Email</p>
-                                        <a href="mailto:maitijoydip888@gmail.com" className="text-lg text-slate-900 font-medium hover:text-blue-600 transition-colors">
+                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Email</p>
+                                        <a href="mailto:maitijoydip888@gmail.com" className="text-lg text-slate-900 dark:text-white font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                                             maitijoydip888@gmail.com
                                         </a>
                                     </div>
                                 </div>
 
                                 <div className="flex items-center group">
-                                    <div className="w-12 h-12 bg-blue-50 text-blue-600 flex items-center justify-center mr-4 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:text-white transition-colors duration-300 rounded-lg shadow-sm">
+                                    <div className="w-12 h-12 bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 flex items-center justify-center mr-4 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:text-white transition-colors duration-300 rounded-lg shadow-sm">
                                         <Github size={24} />
                                     </div>
                                     <div>
-                                        <p className="text-sm text-slate-500 font-bold uppercase tracking-wider">GitHub</p>
-                                        <a href="https://github.com/remissg" target="_blank" rel="noopener noreferrer" className="text-lg text-slate-900 font-medium hover:text-blue-600 transition-colors">
+                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">GitHub</p>
+                                        <a href="https://github.com/remissg" target="_blank" rel="noopener noreferrer" className="text-lg text-slate-900 dark:text-white font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                                             github.com/remissg
                                         </a>
                                     </div>
                                 </div>
 
                                 <div className="flex items-center group">
-                                    <div className="w-12 h-12 bg-blue-50 text-blue-600 flex items-center justify-center mr-4 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:text-white transition-colors duration-300 rounded-lg shadow-sm">
+                                    <div className="w-12 h-12 bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 flex items-center justify-center mr-4 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 group-hover:text-white transition-colors duration-300 rounded-lg shadow-sm">
                                         <Linkedin size={24} />
                                     </div>
                                     <div>
-                                        <p className="text-sm text-slate-500 font-bold uppercase tracking-wider">LinkedIn</p>
-                                        <a href="https://www.linkedin.com/in/joydip-maiti-607ba4301/" target="_blank" rel="noopener noreferrer" className="text-lg text-slate-900 font-medium hover:text-blue-600 transition-colors">
+                                        <p className="text-sm text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">LinkedIn</p>
+                                        <a href="https://www.linkedin.com/in/joydip-maiti-607ba4301/" target="_blank" rel="noopener noreferrer" className="text-lg text-slate-900 dark:text-white font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                                             linkedin.com/in/joydip-maiti...
                                         </a>
                                     </div>
@@ -136,13 +136,13 @@ const Contact = () => {
                     </div>
 
                     {/* Contact Form */}
-                    <div className="bg-white p-8 rounded-2xl shadow-lg relative overflow-hidden group">
+                    <div className="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-lg relative overflow-hidden group">
                         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600"></div>
 
-                        <h3 className="text-2xl font-bold text-slate-900 mb-6">Send Me a Message</h3>
+                        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Send Me a Message</h3>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
-                                <label htmlFor="name" className="block text-sm font-bold text-slate-700 uppercase tracking-wider mb-2">Name</label>
+                                <label htmlFor="name" className="block text-sm font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">Name</label>
                                 <input
                                     type="text"
                                     id="name"
@@ -150,12 +150,12 @@ const Contact = () => {
                                     value={formData.name}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3 bg-slate-50 border border-slate-300 focus:border-transparent focus:ring-2 focus:ring-purple-600 focus:outline-none transition-all placeholder:text-slate-400 rounded-xl"
+                                    className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:border-transparent focus:ring-2 focus:ring-purple-600 focus:outline-none transition-all placeholder:text-slate-400 rounded-xl"
                                     placeholder="Your Name"
                                 />
                             </div>
                             <div>
-                                <label htmlFor="email" className="block text-sm font-bold text-slate-700 uppercase tracking-wider mb-2">Email</label>
+                                <label htmlFor="email" className="block text-sm font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">Email</label>
                                 <input
                                     type="email"
                                     id="email"
@@ -163,12 +163,12 @@ const Contact = () => {
                                     value={formData.email}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3 bg-slate-50 border border-slate-300 focus:border-transparent focus:ring-2 focus:ring-purple-600 focus:outline-none transition-all placeholder:text-slate-400 rounded-xl"
+                                    className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:border-transparent focus:ring-2 focus:ring-purple-600 focus:outline-none transition-all placeholder:text-slate-400 rounded-xl"
                                     placeholder="your.email@example.com"
                                 />
                             </div>
                             <div>
-                                <label htmlFor="message" className="block text-sm font-bold text-slate-700 uppercase tracking-wider mb-2">Message</label>
+                                <label htmlFor="message" className="block text-sm font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">Message</label>
                                 <textarea
                                     id="message"
                                     name="message"
@@ -176,7 +176,7 @@ const Contact = () => {
                                     onChange={handleChange}
                                     required
                                     rows={5}
-                                    className="w-full px-4 py-3 bg-slate-50 border border-slate-300 focus:border-transparent focus:ring-2 focus:ring-purple-600 focus:outline-none transition-all placeholder:text-slate-400 rounded-xl resize-none"
+                                    className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white focus:border-transparent focus:ring-2 focus:ring-purple-600 focus:outline-none transition-all placeholder:text-slate-400 rounded-xl resize-none"
                                     placeholder="Tell me about your project..."
                                 />
                             </div>
