@@ -62,7 +62,7 @@ const Contact = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
                     {/* Contact Info */}
                     <div className="space-y-6">
-                        <div className="bg-white dark:bg-slate-900 p-8 rounded-xl border-l-4 border-transparent bg-clip-padding relative shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-300">
+                        <div className="bg-white dark:bg-slate-900 p-8 rounded-xl border-l-4 border-transparent bg-clip-padding relative shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
                             {/* Gradient Border Trick */}
                             <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-blue-600 to-purple-600 rounded-l-xl"></div>
 
@@ -136,7 +136,7 @@ const Contact = () => {
                     </div>
 
                     {/* Contact Form */}
-                    <div className="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-lg relative overflow-hidden group hover:-translate-y-2 transition-all duration-300">
+                    <div className="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-lg relative overflow-hidden group hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
                         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600"></div>
 
                         <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Send Me a Message</h3>

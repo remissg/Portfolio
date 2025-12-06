@@ -30,7 +30,7 @@ const Internship = () => {
 
                 <div className="max-w-4xl mx-auto">
                     {experiences.map((exp, index) => (
-                        <div key={index} className="bg-white dark:bg-slate-800 p-8 rounded-xl border-l-4 border-transparent bg-clip-padding relative shadow-sm hover:shadow-lg hover:-translate-y-2 transition-all duration-300 group">
+                        <div key={index} className="bg-white dark:bg-slate-800 p-8 rounded-xl border-l-4 border-transparent bg-clip-padding relative shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group">
                             {/* Gradient Border Trick */}
                             <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-blue-600 to-purple-600 rounded-l-xl"></div>
 
