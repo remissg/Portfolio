@@ -22,29 +22,31 @@
 
 Welcome to my personal portfolio repository! This project serves as a digital representation of my skills, experience, and creativity as a Frontend Developer. Built with performance and aesthetics in mind, it leverages the power of **React** for a dynamic user interface and **Tailwind CSS** for rapid, responsive styling.
 
-Since my background includes significant experience with Computer Applications (BCA) and a passion for coding, this portfolio is not just a showcase of projects but also a demonstration of my ability to build clean, maintainable, and modern web applications.
+Now featuring a fully integrated **Night Mode** and dynamic animations!
 
 ## 💡 Key Highlights
 
 ### 🎨 Visual & Design System
-*   **Vibrant Aesthetics:** Uses a carefully curated gradient palette (Blue, Purple, Pink) to create an energetic and professional look.
+*   **🌙 Night Mode:**  Seamlessly switch between Light and Dark themes with a system-aware or manual toggle.
+*   **✨ Dynamic Typewriter:**  A custom JavaScript-based typing animation in the Hero section that cycles through my professional titles.
+*   **🚀 Interactive Cards:**  Experience cards and project tiles feature a "Lift-on-Hover" effect for tactile feedback.
+*   **Vibrant Aesthetics:** Uses a curated gradient palette (Blue, Purple, Pink) that adapts beautifully to both light and dark backgrounds.
 *   **Glassmorphism & Gradients:** Incorporates modern design trends like glass effects and subtle background blurs.
-*   **Custom Animations:** Features custom CSS animations for entrance effects, hover states, and typewriter effects to engage the user.
 *   **Responsive Layout:** A fluid grid system ensures the site looks perfect on large desktops, tablets, and small mobile screens.
 
 ### 🛠️ Technical Implementation
-*   **Component-Based Architecture:** The codebase is modular, with separate components for Hero, Skills, Projects, Experience, and Contact sections, promoting reusability.
+*   **State Management:** React Context API (`ThemeContext`) for managing global application state like theming.
+*   **Component-Based Architecture:** Modular codebase with reusable components for Layouts, Sections, and UI elements.
 *   **Performance Optimization:** Powered by Vite, ensuring near-instant HMR (Hot Module Replacement) and optimized production builds.
-*   **Interactive Elements:** Hover effects on cards, buttons, and links provide immediate visual feedback.
-*   **Custom Assets:** Integrated custom profile images and optimized assets for fast loading.
+*   **Clean Code:**  Maintains a clean and organized structure with separate files for logic, content, and styling.
 
 ## 🧩 Sections Breakdown
 
-1.  **Hero Section:** The landing area featuring a dynamic introduction, downloadable resume, and social links.
-2.  **About/Skills:** a visual grid of technical skills with a unique glowing hover effect.
-3.  **Experience:** A timeline or card-based view of my professional journey and internships.
-4.  **Projects:** Showcasing key projects with descriptions, tech stacks, and links to live demos/repos.
-5.  **Contact:** A simple and accessible way for recruiters and collaborators to reach out.
+1.  **Hero Section:** Dynamic introduction with typing effect, resume download, and social links.
+2.  **About/Skills:** Visual grid of technical skills with hover effects.
+3.  **Experience:** Timeline/Card-based view of professional journey and internships.
+4.  **Projects:** Showcase of key projects with darker cards in night mode, tech tags, and links.
+5.  **Contact:** Fully styled contact form with accessibility considerations for dark mode.
 
 ## 🛠️ Tech Stack
 
@@ -60,22 +62,21 @@ Since my background includes significant experience with Computer Applications (
 
 ```bash
 joydip-portfolio/
-├── public/              # Static assets (favicons, manifest, etc.)
+├── public/              # Static assets
 ├── src/
-│   ├── assets/          # Images, logos, and global design assets
-│   ├── components/      # Reusable React components
+│   ├── assets/          # Images and assets
+│   ├── components/      # React components
+│   │   ├── common/      # Common UI components (ThemeToggle, etc.)
 │   │   ├── layout/      # Layout wrappers (Navbar, Footer)
-│   │   └── sections/    # Individual sections (Hero, Projects, Skills)
-│   ├── pages/           # Page definitions (Home, etc.)
-│   ├── App.jsx          # Root component handling layout and routing
-│   ├── main.jsx         # Application entry point
-│   └── index.css        # Global styles, Tailwind imports, custom animations
-├── .gitignore           # Git ignore rules
+│   │   └── sections/    # Individual sections (Hero, etc.)
+│   ├── context/         # Context Providers (ThemeContext)
+│   ├── App.jsx          # Root component
+│   ├── main.jsx         # Entry point
+│   └── index.css        # Global styles & Tailwind
 ├── index.html           # HTML entry point
-├── package.json         # Project dependencies and scripts
-├── postcss.config.js    # PostCSS configuration
-├── tailwind.config.js   # Tailwind CSS configuration
-└── vite.config.js       # Vite configuration
+├── package.json         # Dependencies
+├── tailwind.config.js   # Tailwind config
+└── vite.config.js       # Vite config
 ```
 
 ## ⚡ Getting Started
@@ -99,7 +100,7 @@ Ensure you have the following installed:
 2.  **Install Dependencies**
     ```bash
     npm install
-    # or if you use yarn
+    # or
     yarn install
     ```
 
@@ -107,17 +108,16 @@ Ensure you have the following installed:
     ```bash
     npm run dev
     ```
-    Open your browser and navigate to `http://localhost:5173` to view the app.
+    Open `http://localhost:5173` to view the app.
 
 4.  **Build for Production**
     ```bash
     npm run build
     ```
-    This command compiles the application into the `dist` folder, optimized for deployment.
 
 ## 📫 Connect with Me
 
-I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+I'm always open to discussing new projects, creative ideas, or opportunities.
 
 *   **LinkedIn:** [Joydip Maiti](https://www.linkedin.com/in/joydip-maiti-607ba4301/)
 *   **GitHub:** [@remissg](https://github.com/remissg)
