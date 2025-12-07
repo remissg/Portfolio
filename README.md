@@ -8,7 +8,7 @@
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
 
 </div>
 
@@ -128,5 +128,5 @@ I'm always open to discussing new projects, creative ideas, or opportunities.
 <p align="center">
   Simply built with Code & Creativity.
   <br>
-  © 2024 Joydip Maiti. All Rights Reserved.
+  © 2025 Joydip Maiti. All Rights Reserved.
 </p>
